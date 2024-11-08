@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#punteggio {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.istruzioni {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+/* Esercizio 1: Click */
+.target {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    transition: background-color 0.3s;
+}
+
+.target.clicked {
+    background-color: #2ecc71;
+}
+
+/* Esercizio 2: Trascinamento */
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    margin: 10px;
+    display: inline-block;
+    cursor: move;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.item.dropped {
+    background-color: #2ecc71;
+}
+
+.drop-zone {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #2c3e50;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.drop-zone.filled {
+    border-style: solid;
+    border-color: #2ecc71;
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+/* Esercizio 3: Precisione */
+#precision-area {
+    position: relative;
+    height: 400px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.precision-target {
+    position: absolute;
+    background-color: #f1c40f;  /* Cambiato da #2ecc71 a #f1c40f (giallo) */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.precision-target.hit {
+    background-color: #2ecc71;  /* Verde quando colpito */
+    transform: scale(0.8);
+}
